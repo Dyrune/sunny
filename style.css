@@ -263,7 +263,7 @@ img {
     display: none;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 470px) {
     .headercontent,
     .nav-wrapper {
         position: fixed;
@@ -297,11 +297,18 @@ img {
 
     #mobile {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .jar img {
+        width: 50%;
     }
 
     .container2 {
         margin-top: 300px;
+        width: 90%;
+        font-size: 30px;
     }
 
     .graphicphoto {
@@ -366,6 +373,7 @@ img {
 
     .eggcontent {
         height: 500px;
+        width: 100%;
     }
 
     .hamburger {
@@ -380,7 +388,7 @@ img {
         cursor: pointer;
         transition: all 0.5s;
     }
-    
+
     .mobile-container {
         width: 100%;
         margin: auto;

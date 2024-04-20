@@ -263,7 +263,11 @@ img {
     display: none;
 }
 
-@media screen and (max-width: 470px) {
+.icc {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
     .headercontent,
     .nav-wrapper {
         position: fixed;
@@ -277,6 +281,21 @@ img {
         transition: all 0.5%;
     }
 
+    .icc {
+        display: flex;
+        position: fixed;
+        right: 0;
+    }
+
+    .icc img {
+        width: 20px;
+        height: 15px;
+        color: black;
+        cursor: pointer;
+        padding-top: 15px;
+        padding-right: 15px;
+    }
+
     .ram {
         display: flex;
     }
@@ -284,7 +303,6 @@ img {
     .nav-wrapper {
         width: 100%;
         transform: translateX(-200%);
-        z-index: 1;
     }
 
     .container1 {
@@ -377,7 +395,6 @@ img {
     }
 
     .hamburger {
-        z-index: 11;
         cursor: pointer;
     }
 
@@ -411,7 +428,7 @@ img {
         position: fixed;
         top: 7%;
         background-color: white;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -452,11 +469,4 @@ img {
       }
       
 
-}
-
-@media screen and (max-width: 400px) {
-    .container2 div {
-        font-size: 16px;
-        top: 0%;
-    }
 }

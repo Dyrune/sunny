@@ -1,19 +1,18 @@
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "flex") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "flex";
-    }
-}
+document.addEventListener("DOMContentLoaded", function () {
+  var menuDrop = document.querySelector("#myLinks");
+  var hb = document.querySelector(".hb");
+  var cluz = document.querySelector(".cluz")
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("myLinks").style.top = "50px";
-  } else {
-    document.getElementById("myLinks").style.top = "-100%";
-  }
-  prevScrollpos = currentScrollPos;
-}
+  hb.addEventListener("click", function () {
+    menuDrop.style.display = "flex";
+    hb.style.display = "none";
+    cluz.style.display = "flex";
+  });
+
+  cluz.addEventListener("click", function () {
+    menuDrop.style.display = "none";
+    hb.style.display = "flex";
+    cluz.style.display = "none";
+  });
+
+});
